@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذات | Purely Yours - دريسات فضفاض راقية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #1a4d3e;
+            --gold: #d4af37;
+            --light-gold: #f4e4c1;
+            --cream: #faf8f3;
+            --dark-text: #2c2c2c;
+            --light-text: #666;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--cream);
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(26, 77, 62, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #0f3329 100%);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, var(--gold) 35px, var(--gold) 36px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, var(--gold) 35px, var(--gold) 36px);
+        }
+
+        .top-bar {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.8rem 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .top-bar p {
+            color: var(--light-gold);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Brand Logo Circle - مكان الشعار */
+        .brand-logo-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 2rem auto 1.5rem;
+            position: relative;
+            z-index: 3;
+            overflow: hidden;
+            border: 4px solid var(--gold);
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.4),
+                0 0 0 8px rgba(212, 175, 55, 0.2);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* نص افتراضي إذا لم يتم رفع صورة */
+        .brand-logo-placeholder {
+            color: var(--light-text);
+            font-size: 0.75rem;
+            text-align: center;
+            padding: 1rem;
+            line-height: 1.4;
+        }
+
+        .header-content {
+            padding: 2rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container {
+            max-width: 300px;
+            margin: 0 auto 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 3px solid var(--gold);
+            position: relative;
+        }
+
+        .logo-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--gold), transparent, var(--gold));
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .brand-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .brand-subtitle {
+            font-size: 1.3rem;
+            color: var(--light-gold);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            margin: -50px auto 4rem;
+            max-width: 1200px;
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(212, 175, 55, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            text-align: center;
+            line-height: 2.2;
+            max-width: 800px;
+            margin: 2rem auto 0;
+        }
+
+        /* Product Showcase */
+        .product-section {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            margin-top: 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-green), var(--gold));
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--light-gold) 0%, var(--cream) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--light-text);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 2rem;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            color: var(--light-text);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: var(--light-text);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        /* Order Form Section */
+        .order-section {
+            background: white;
+            max-width: 800px;
+            margin: 5rem auto;
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .order-title {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .order-subtitle {
+            font-size: 1.1rem;
+            color: var(--light-text);
+        }
+
+        .form-container {
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid rgba(26, 77, 62, 0.2);
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Tajawal', sans-serif;
+            transition: border-color 0.3s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Size Selection */
+        .size-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .size-option {
+            padding: 1rem;
+            border: 2px solid rgba(26, 77, 62, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .size-option:hover {
+            border-color: var(--primary-green);
+            background: rgba(26, 77, 62, 0.05);
+        }
+
+        .size-option.selected {
+            background: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+        }
+
+        /* Color Selection */
+        .color-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .color-option {
+            padding: 1rem;
+            border: 2px solid rgba(26, 77, 62, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            font-weight: 500;
+        }
+
+        .color-option:hover {
+            border-color: var(--primary-green);
+            transform: scale(1.05);
+        }
+
+        .color-option.selected {
+            border-color: var(--primary-green);
+            border-width: 3px;
+            background: rgba(26, 77, 62, 0.05);
+        }
+
+        .color-preview {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem 2rem;
+            background: linear-gradient(135deg, var(--primary-green) 0%, #0f3329 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+            box-shadow: 0 10px 30px rgba(26, 77, 62, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(26, 77, 62, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Loading Indicator */
+        .loading-indicator {
+            display: none;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(26, 77, 62, 0.1);
+            border-top-color: var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Success and Error Messages */
+        .success-message,
+        .error-message {
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        .success-message.show,
+        .error-message.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-green);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+        }
+
+        .footer-links {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--light-gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .brand-logo-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .brand-title {
+                font-size: 2rem;
+            }
+
+            .brand-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero {
+                padding: 3rem 2rem;
+                margin: -30px 1rem 3rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .order-section {
+                margin: 3rem 1rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .order-title {
+                font-size: 2rem;
+            }
+
+            .size-selector {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-pattern"></div>
+            
+            <div class="top-bar">
+                <p>✨ توصيل مجاني لجميع أنحاء المملكة ✨</p>
+            </div>
+
+            <!-- Brand Logo Circle - مكان الشعار المدور -->
+            <div class="brand-logo-circle">
+                <!-- 
+                    لإضافة شعار البراند:
+                    1. ارفع صورة الشعار على أي خدمة استضافة صور (مثل: imgur.com)
+                    2. ضع رابط الصورة في src="" بدلاً من القيمة الفارغة
+                    مثال: <img src="https://i.imgur.com/yourlogo.png" alt="ذات">
+                -->
+                <img src="" alt="ذات | Purely Yours" id="brandLogo" style="display: none;">
+                <div class="brand-logo-placeholder">ضع شعار البراند هنا</div>
+            </div>
+
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 120'%3E%3Ctext x='150' y='70' font-family='Cinzel, serif' font-size='48' font-weight='700' fill='%231a4d3e' text-anchor='middle'%3E%D8%B0%D8%A7%D8%AA%3C/text%3E%3Ctext x='150' y='100' font-family='Cinzel, serif' font-size='20' fill='%23d4af37' text-anchor='middle'%3EPurely Yours%3C/text%3E%3C/svg%3E" alt="ذات | Purely Yours">
+                </div>
+                
+                <h1 class="brand-title">ذات</h1>
+                <p class="brand-subtitle">Purely Yours</p>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2 class="hero-title">أناقة متحفظة، راحة لا مثيل لها</h2>
+            <p class="hero-description">
+                اكتشفي مجموعتنا الحصرية من الدريسات الفضفاض المصممة خصيصاً للمرأة العصرية التي تقدّر الأناقة والراحة معاً. 
+                كل قطعة مصنوعة بعناية فائقة من أجود الأقمشة لتمنحك إطلالة راقية ومريحة طوال اليوم.
+            </p>
+        </section>
+
+        <!-- Product Section -->
+        <section class="product-section">
+            <div class="section-header">
+                <h2 class="section-title">مجموعتنا المميزة</h2>
+                <p class="section-subtitle">دريسات فضفاض راقية بتصاميم عصرية ومتحفظة</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span>صورة المنتج</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">دريس فضفاض كلاسيكي</h3>
+                        <p class="product-description">
+                            تصميم راقي وبسيط بقصة فضفاضة مريحة، مثالي للإطلالات اليومية والمناسبات الخاصة.
+                        </p>
+                        <div class="product-price">٢٩٩ ر.س</div>
+                        <ul class="product-features">
+                            <li>قماش قطن 100% عالي الجودة</li>
+                            <li>تصميم فضفاض مريح</li>
+                            <li>ألوان ثابتة لا تبهت</li>
+                            <li>مقاسات من S إلى XXL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span>صورة المنتج</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">دريس فضفاض عصري</h3>
+                        <p class="product-description">
+                            تصميم عصري بلمسات كلاسيكية، يجمع بين الأناقة والراحة بشكل مثالي.
+                        </p>
+                        <div class="product-price">٣٤٩ ر.س</div>
+                        <ul class="product-features">
+                            <li>خامة لينن فاخرة</li>
+                            <li>قصة واسعة أنيقة</li>
+                            <li>تصميم يناسب جميع المقاسات</li>
+                            <li>سهل الغسل والعناية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span>صورة المنتج</span>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">دريس فضفاض فاخر</h3>
+                        <p class="product-description">
+                            قطعة فاخرة بتفاصيل راقية، مثالية للمناسبات الخاصة والإطلالات المميزة.
+                        </p>
+                        <div class="product-price">٣٩٩ ر.س</div>
+                        <ul class="product-features">
+                            <li>قماش حرير مخلوط فاخر</li>
+                            <li>تطريز يدوي دقيق</li>
+                            <li>تصميم حصري</li>
+                            <li>يأتي مع حقيبة تغليف فاخرة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form Section -->
+        <section class="order-section" id="order">
+            <div class="order-header">
+                <h2 class="order-title">اطلبي الآن</h2>
+                <p class="order-subtitle">املئي النموذج وسنتواصل معك خلال 24 ساعة</p>
+            </div>
+
+            <div class="form-container">
+                <form id="order-form">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل *</label>
+                        <input type="text" id="name" name="name" required placeholder="أدخلي اسمك الكامل">
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="05XXXXXXXX">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com">
+                    </div>
+
+                    <!-- Product Selection -->
+                    <div class="form-group">
+                        <label for="product">المنتج *</label>
+                        <select id="product" name="product" required>
+                            <option value="">اختاري المنتج</option>
+                            <option value="دريس فضفاض كلاسيكي - ٢٩٩ ر.س">دريس فضفاض كلاسيكي - ٢٩٩ ر.س</option>
+                            <option value="دريس فضفاض عصري - ٣٤٩ ر.س">دريس فضفاض عصري - ٣٤٩ ر.س</option>
+                            <option value="دريس فضفاض فاخر - ٣٩٩ ر.س">دريس فضفاض فاخر - ٣٩٩ ر.س</option>
+                        </select>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="form-group">
+                        <label>المقاس *</label>
+                        <div class="size-selector">
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                            <div class="size-option" data-size="XXL">XXL</div>
+                        </div>
+                        <input type="hidden" id="size" name="size" required>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="form-group">
+                        <label>اللون *</label>
+                        <div class="color-selector">
+                            <div class="color-option selected" data-color="أخضر زيتوني">
+                                <div class="color-preview" style="background-color: #556B2F;"></div>
+                                <span>أخضر زيتوني</span>
+                            </div>
+                            <div class="color-option" data-color="بيج">
+                                <div class="color-preview" style="background-color: #F5F5DC;"></div>
+                                <span>بيج</span>
+                            </div>
+                            <div class="color-option" data-color="أسود">
+                                <div class="color-preview" style="background-color: #2C2C2C;"></div>
+                                <span>أسود</span>
+                            </div>
+                            <div class="color-option" data-color="كحلي">
+                                <div class="color-preview" style="background-color: #000080;"></div>
+                                <span>كحلي</span>
+                            </div>
+                        </div>
+                        <input type="hidden" id="color" name="color" value="أخضر زيتوني">
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="address">عنوان التوصيل *</label>
+                        <textarea id="address" name="address" required placeholder="أدخلي عنوان التوصيل الكامل (المدينة، الحي، رقم المبنى)"></textarea>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="form-group">
+                        <label for="notes">ملاحظات إضافية</label>
+                        <textarea id="notes" name="notes" placeholder="أي ملاحظات إضافية حول الطلب..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        إرسال الطلب
+                    </button>
+
+                    <!-- Loading Indicator -->
+                    <div class="loading-indicator" id="loading-indicator">
+                        <div class="loading-spinner"></div>
+                        <p style="margin-top: 1rem; color: var(--primary-green);">جاري إرسال طلبك...</p>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="success-message">
+                        ✓ تم استلام طلبك بنجاح! سنتصل بك خلال 24 ساعة لتأكيد التفاصيل.
+                    </div>
+
+                    <!-- Error Message -->
+                    <div class="error-message" id="error-message">
+                        حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3 class="footer-title">ذات | Purely Yours</h3>
+                <p>للاستفسارات والطلبات الخاصة</p>
+                
+                <div class="footer-links">
+                    <a href="tel:+966500000000">+966 50 000 0000</a>
+                    <a href="mailto:info@zatt.com">info@zatt.com</a>
+                    <a href="https://instagram.com/zatt_fashion" target="_blank">@zatt_fashion</a>
+                </div>
+                
+                <p class="copyright">
+                    © 2026 ذات | Purely Yours. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // إظهار الشعار إذا تم إضافة رابط صورة
+        document.addEventListener('DOMContentLoaded', function() {
+            const brandLogo = document.getElementById('brandLogo');
+            const placeholder = document.querySelector('.brand-logo-placeholder');
+            
+            // إذا كان هناك src للصورة، أظهرها واخف النص
+            if (brandLogo.src && brandLogo.src !== window.location.href) {
+                brandLogo.style.display = 'block';
+                placeholder.style.display = 'none';
+            }
+
+            // Size selection
+            const sizeOptions = document.querySelectorAll('.size-option');
+            const sizeInput = document.getElementById('size');
+            
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    sizeInput.value = this.getAttribute('data-size');
+                });
+            });
+            
+            // Color selection
+            const colorOptions = document.querySelectorAll('.color-option');
+            const colorInput = document.getElementById('color');
+            
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    colorOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    colorInput.value = this.getAttribute('data-color');
+                });
+            });
+            
+            // Form submission with Google Sheets
+            const orderForm = document.getElementById('order-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
+            orderForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validate size
+                if (!sizeInput.value) {
+                    alert('الرجاء اختيار المقاس');
+                    return;
+                }
+                
+                // Show loading
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'جاري الإرسال...';
+                loadingIndicator.style.display = 'block';
+                successMessage.classList.remove('show');
+                errorMessage.classList.remove('show');
+                
+                // Prepare data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('email').value || 'غير محدد',
+                    product: document.getElementById('product').value,
+                    size: sizeInput.value,
+                    color: colorInput.value,
+                    address: document.getElementById('address').value,
+                    notes: document.getElementById('notes').value || 'لا توجد ملاحظات',
+                    timestamp: new Date().toLocaleString('ar-SA', {
+                        timeZone: 'Asia/Riyadh'
+                    })
+                };
+                
+                try {
+                    // Send to Google Sheets
+                    const response = await fetch('https://script.google.com/macros/s/AKfycbxuIbeiwQzScuQJKAcDkne28SucLWGMyb2ZKO1tmts8S6ImoSmFM66rhtf6mC7ULkPV/exec', {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    // Show success
+                    successMessage.classList.add('show');
+                    orderForm.reset();
+                    
+                    // Reset selections
+                    sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                    colorOptions[0].classList.add('selected');
+                    sizeInput.value = '';
+                    colorInput.value = 'أخضر زيتوني';
+                    
+                    // Scroll to message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    errorMessage.classList.add('show');
+                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'إرسال الطلب';
+                loadingIndicator.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
