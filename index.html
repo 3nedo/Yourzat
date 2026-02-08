@@ -831,22 +831,34 @@
                 <form id="order-form">
                     <!-- Name -->
                     <div class="form-group">
-                        <label for="name">الاسم الكامل *</label>
-                        <input type="text" id="name" name="name" required placeholder="أدخلي اسمك الكامل">
-                    </div>
 
                     <!-- Phone -->
                     <div class="form-group">
-                        <label for="phone">رقم الجوال *</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="05XXXXXXXX">
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني</label>
-                        <input type="email" id="email" name="email" placeholder="example@email.com">
-                    </div>
-
+                        
+<!-- Contact Form -->
+<form action="https://formspree.io/f/mvzboejz" method="POST">
+  <label>
+    Name:
+    <input type="text" name="name" placeholder="اكتب اسمك هنا" required>
+  </label>
+  <br>
+  <label>
+    Address:
+    <input type="text" name="address" placeholder="اكتب عنوانك هنا" required>
+  </label>
+  <br>
+  <label>
+    Phone:
+    <input type="tel" name="phone" placeholder="اكتب رقم تليفونك هنا" required>
+  </label>
+  <br>
+  <label>
+    Message:
+    <textarea name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+  </label>
+  <br>
+  <button type="submit">Send</button>
+</form>
                     <!-- Product Selection -->
                     <div class="form-group">
                         <label for="product">المنتج *</label>
